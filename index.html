@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House Price Prediction | Moghal Tanveer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">VIHARA<span>TECH</span></div>
+        <div class="nav-tag">MACHINE LEARNING PROJECT</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <span class="top-label">SMART PROPERTY VALUATION</span>
+
+            <h1>
+                HOUSE PRICE
+                <span>PREDICTION</span>
+            </h1>
+
+            <p>
+                Discover the estimated value of your property
+                with the power of Machine Learning.
+            </p>
+
+            <!-- Developer Profile -->
+            <div class="author">
+
+                <div class="profile">MT</div>
+
+                <div class="author-info">
+                    <h3>MOGHAL TANVEER</h3>
+
+                    <div class="contact-details">
+                        <span>✉ moghaltanveer90@gmail.com</span>
+                        <span>☎ 7680014278</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+         <div class="hero-image">
+
+    <img src="{{ url_for('static', filename='images/moghal.jpg') }}"
+         alt="Moghal Tanveer"
+         class="developer-photo">
+
+    <div class="image-overlay">
+        <span>DEVELOPER & ML ENGINEER</span>
+        <h2>MOGHAL<br>TANVEER</h2>
+    </div>
+
+</div>
+
+                    </div>
+        </div>
+
+    </header>
+
+    <!-- Main Prediction Section -->
+    <section class="prediction-section">
+
+        <div class="section-heading">
+
+            <span class="top-label">PROPERTY INFORMATION</span>
+
+            <h2>House Price Calculator</h2>
+
+            <p>
+                Enter your property details below to calculate
+                the estimated house price.
+            </p>
+
+        </div>
+
+        <!-- House Details Form -->
+        <form action="/predict" method="POST">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>01. Bedrooms</label>
+                    <input type="number" name="bedrooms"
+                           min="0" step="1" placeholder="e.g. 3" required>
+                </div>
+
+                <div class="form-group">
+                    <label>02. Bathrooms</label>
+                    <input type="number" name="bathrooms"
+                           min="0" step="0.25" placeholder="e.g. 2" required>
+                </div>
+
+                <div class="form-group">
+                    <label>03. Living Area (sqft)</label>
+                    <input type="number" name="sqft_living"
+                           min="1" placeholder="e.g. 2000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>04. Lot Area (sqft)</label>
+                    <input type="number" name="sqft_lot"
+                           min="1" placeholder="e.g. 8000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>05. Floors</label>
+                    <input type="number" name="floors"
+                           min="1" step="0.5" placeholder="e.g. 2" required>
+                </div>
+
+                <div class="form-group">
+                    <label>06. Waterfront</label>
+                    <select name="waterfront" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>07. View Rating</label>
+                    <select name="view" required>
+                        <option value="">Select</option>
+                        <option value="0">0 - No View</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4 - Excellent</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>08. Condition</label>
+                    <select name="condition" required>
+                        <option value="">Select</option>
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Average</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>09. Above Ground Area (sqft)</label>
+                    <input type="number" name="sqft_above"
+                           min="0" placeholder="e.g. 1500" required>
+                </div>
+
+                <div class="form-group">
+                    <label>10. Basement Area (sqft)</label>
+                    <input type="number" name="sqft_basement"
+                           min="0" placeholder="e.g. 500" required>
+                </div>
+
+                <div class="form-group">
+                    <label>11. Year Built</label>
+                    <input type="number" name="yr_built"
+                           min="1800" max="2026" placeholder="e.g. 2000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>12. Year Renovated</label>
+                    <input type="number" name="yr_renovated"
+                           min="0" max="2026" placeholder="e.g. 2015 or 0" required>
+                </div>
+
+                <div class="form-group">
+                    <label>13. City</label>
+                    <input type="text" name="city"
+                           placeholder="e.g. Seattle" required>
+                </div>
+
+                <div class="form-group">
+                    <label>14. State / ZIP Code</label>
+                    <input type="text" name="statezip"
+                           placeholder="e.g. WA 98133" required>
+                </div>
+
+                <div class="form-group">
+                    <label>15. Country</label>
+                    <input type="text" name="country"
+                           placeholder="e.g. USA" required>
+                </div>
+
+            </div>
+
+            <!-- Predict Button -->
+            <button type="submit" class="predict-button">
+                PREDICT HOUSE PRICE <span>→</span>
+            </button>
+
+        </form>
+
+        <!-- Display Prediction -->
+        {% if prediction %}
+
+        <div class="result-card">
+            <span>YOUR ESTIMATED HOUSE PRICE</span>
+            <h2>{{ prediction }}</h2>
+            <p>Prediction generated successfully!</p>
+        </div>
+
+        {% endif %}
+
+        <!-- Display Error -->
+        {% if error %}
+
+        <div class="error-message">
+            {{ error }}
+        </div>
+
+        {% endif %}
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>HOUSE PRICE PREDICTION</h3>
+
+        <p>Developed by <strong>MOGHAL TANVEER</strong></p>
+
+        <p class="copyright">
+            © 2026 Moghal Tanveer. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

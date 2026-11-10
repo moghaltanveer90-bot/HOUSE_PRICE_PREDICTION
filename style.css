@@ -1,0 +1,448 @@
+
+/* =========================================
+   HOUSE PRICE PREDICTION
+   Designed by MOGHAL TANVEER
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b1220;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: #111c32;
+    padding: 22px 0;
+    border-bottom: 1px solid #263957;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.brand {
+    color: #e9bd68;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: #d5dcec;
+}
+
+.contact-info a {
+    color: #e9bd68;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 65px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #111c32, #182b49);
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #e9bd68;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+.profile {
+    margin-top: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.calculator {
+    background: #14223a;
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #344968;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.calculator h2 {
+    color: #e9bd68;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.calculator p {
+    color: #b9c5d8;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #e3eaf5;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    background: #0b1220;
+    border: 1px solid #425675;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #e9bd68;
+}
+
+.predict-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 28px;
+    border: none;
+    border-radius: 9px;
+    background: #e9bd68;
+    color: #111c32;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.predict-btn:hover {
+    background: #ffd98b;
+    transform: translateY(-2px);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 22px;
+    text-align: center;
+    background: #203b32;
+    border: 1px solid #3c8062;
+    border-radius: 10px;
+    color: #a8f0c5;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+footer {
+    background: #111c32;
+    padding: 25px;
+    text-align: center;
+    color: #9caec7;
+    margin-top: 50px;
+}
+
+@media(max-width: 650px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .calculator {
+        padding: 22px;
+    }
+
+    .contact-info {
+        gap: 10px;
+    }
+}
+
+/* =================================
+   FIRE DRAGON THEME - VIHARATECH
+================================= */
+
+body {
+    background:
+        radial-gradient(ellipse at top, #521010, transparent 55%),
+        linear-gradient(135deg, #090909, #210707, #160d0d);
+    color: #fff;
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(100deg, #150707, #650b0b, #a52a0a);
+    border-bottom: 2px solid #ff9d00;
+    box-shadow: 0 5px 30px #ff450055;
+}
+
+.logo span {
+    color: #ffb000;
+}
+
+.nav-tag {
+    border-color: #ffae42;
+    color: #ffd27d;
+}
+
+/* Hero */
+.hero {
+    background:
+        radial-gradient(circle at 85% 30%, #ff450055, transparent 35%),
+        radial-gradient(circle at 10% 90%, #ff9d0033, transparent 35%),
+        linear-gradient(120deg, #100606, #390909, #170707);
+}
+
+.hero h1 {
+    color: #fff1df;
+    text-shadow: 0 0 25px #ff450055;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #ffdf70, #ff7b00, #ff2525);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.top-label {
+    background: linear-gradient(90deg, #a50000, #ff6500);
+    color: #fff3d0;
+    box-shadow: 0 0 18px #ff450055;
+}
+
+/* Developer Profile */
+.profile {
+    background: linear-gradient(135deg, #ffcc33, #ff4500, #9d0208);
+    border: 3px solid #ffd166;
+    box-shadow: 0 0 25px #ff650088;
+}
+
+.author-info h3 {
+    color: #ffc857;
+}
+
+/* Dragon Hero Panel */
+.hero-image {
+    background:
+        linear-gradient(180deg, #00000022, #160000dd),
+        linear-gradient(135deg, #570000, #e23d00, #260000);
+    border: 2px solid #ff9d00;
+    box-shadow: 0 0 35px #ff450066;
+}
+
+.hero-image::before {
+    content: "🐉";
+    font-size: clamp(110px, 18vw, 190px);
+    top: 5px;
+    color: white;
+    filter: drop-shadow(0 0 25px #ff5e00);
+}
+
+.image-overlay span {
+    color: #ffd166;
+}
+
+/* Calculator Section */
+.prediction-section {
+    background: linear-gradient(145deg, #201010, #351111, #170909);
+    border: 1px solid #a64b22;
+    box-shadow: 0 15px 55px #ff450022;
+}
+
+.section-heading h2 {
+    color: #ffc857;
+}
+
+.section-heading p {
+    color: #e8c9b0;
+}
+
+/* Input Cards */
+.form-group,
+.form-group:nth-child(4n+1),
+.form-group:nth-child(4n+2),
+.form-group:nth-child(4n+3) {
+    background: linear-gradient(135deg, #301414, #451b12);
+    border: 1px solid #a64b22;
+}
+
+.form-group:hover {
+    border-color: #ffb000;
+    box-shadow: 0 0 22px #ff650044;
+    transform: translateY(-5px);
+}
+
+.form-group label {
+    color: #ffc857;
+}
+
+.form-group input,
+.form-group select {
+    background: #160909;
+    color: #fff;
+    border: 1px solid #8f3c20;
+}
+
+.form-group input::placeholder {
+    color: #b99a88;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #ff9d00;
+    box-shadow: 0 0 0 4px #ff650033;
+}
+
+/* Fire Prediction Button */
+.predict-button {
+    background: linear-gradient(100deg,
+        #8b0000, #e63900, #ff8c00, #ffcf33);
+    background-size: 250% auto;
+    color: #190707;
+    font-weight: 900;
+    box-shadow: 0 0 25px #ff450066;
+}
+
+.predict-button:hover {
+    background-position: right center;
+    box-shadow: 0 0 35px #ff8c00aa;
+    transform: translateY(-4px);
+}
+
+/* Prediction Result */
+.result-card {
+    background:
+        radial-gradient(circle at top right, #ffb00055, transparent 45%),
+        linear-gradient(120deg, #750000, #bd3300, #4a0909);
+    border: 1px solid #ffb000;
+    box-shadow: 0 0 35px #ff450055;
+}
+
+.result-card h2 {
+    color: #ffe082;
+    text-shadow: 0 0 15px #ffb00077;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(110deg, #100606, #4a0808, #190707);
+    border-top: 2px solid #d97706;
+}
+
+footer h3 {
+    color: #ffc857;
+}
+
+/* Error */
+.error-message {
+    background: #450b0b;
+    color: #ffb4a2;
+    border: 1px solid #ff4d4d;
+}
+
+/* ===== FINAL PHOTO AND DRAGON FIX ===== */
+
+/* Remove dragon artwork and old background images */
+.hero-image,
+.hero-image::before,
+.hero-image::after {
+    background-image: none !important;
+}
+
+.hero-image::before,
+.hero-image::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Make the photo a compact portrait card */
+.hero-image {
+    width: 320px !important;
+    max-width: 90% !important;
+    height: 390px !important;
+    min-height: 390px !important;
+    margin: 35px auto !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 3px solid #ffb52e !important;
+    border-radius: 24px !important;
+    background: #240707 !important;
+    box-shadow: 0 0 25px rgba(255, 100, 0, 0.6) !important;
+    flex: none !important;
+}
+
+/* Fit your photograph inside the card */
+.hero-image img.developer-photo {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
+    border-radius: 20px !important;
+}
+
+/* Add readable text at the bottom */
+.hero-image .image-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    padding: 20px !important;
+    background: linear-gradient(
+        to top,
+        rgba(20, 0, 0, 0.9),
+        transparent 65%
+    ) !important;
+}
+
+.hero-image .image-overlay span {
+    color: #ffd166 !important;
+    font-size: 11px !important;
+}
+
+.hero-image .image-overlay h2 {
+    color: white !important;
+    font-size: 25px !important;
+}
+
+@media (max-width: 600px) {
+    .hero-image {
+        width: 280px !important;
+        height: 350px !important;
+        min-height: 350px !important;
+    }
+}
